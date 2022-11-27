@@ -11,6 +11,15 @@
 * {
   font-family: sans-serif; /* Change your font family */
 }
+.logo {
+  width: 55px;
+  height: auto;
+  border-radius: 50%;
+}
+
+h3 {
+  color: aliceblue;
+}
 
 .table-sortable {
   border-collapse: collapse;
@@ -122,6 +131,8 @@ body {
   margin: 25px 0;
 }
 h1{
+  position: relative;
+  top: 60px;
   text-align: center;
 }
 h1:after{
@@ -188,8 +199,7 @@ a:before {
   content:"ICT";
   color:#fff;
   position:absolute;
-  width: 0;
-  border-right: 5px solid aqua;
+   border-right: 5px solid aqua;
   overflow: hidden;
   transition: 1s;
   text-shadow: 0px 0px 10px aqua,0px 0px 20px aqua,0px 0px 30px aqua;
