@@ -32,7 +32,7 @@ function addActive(event) {
 
   var ull;
   for (var i = 0; i < arrUrl.length; i++) {
-    if (ten == arrUrl[i].id) {
+    if (ten === arrUrl[i].id) {
       ull = i + 1;
     }
   }
