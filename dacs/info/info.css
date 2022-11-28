@@ -17,35 +17,39 @@ body {
   height: auto;
   border-radius: 50%;
 }
-
-h3 {
-  color: aliceblue;
-}
-
 h1 {
   color: rgb(175, 108, 108);
 }
+h2{
+  color: aliceblue;
+
+}
+h3  {
+  color: aliceblue;
+}
+
+
 
 .info_info {
   height: 500px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   margin-bottom: 10px;
 }
 
 .info_under {
   height: 300px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 .point {
   height: 600px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   margin-bottom: 10px;
 }
 
 .feed_back {
   height: 200px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 
   height: 200px;
   overflow-x: hidden;
@@ -54,13 +58,13 @@ h1 {
 
 .history {
   height: 400px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   margin-bottom: 10px;
 }
 
 .pay {
   height: 400px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 
 .video-container {
