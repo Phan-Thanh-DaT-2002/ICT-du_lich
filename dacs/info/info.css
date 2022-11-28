@@ -84,3 +84,83 @@ h3  {
   width: 100%;
   height: 100%;
 }
+img{
+  float: left;
+  max-width:auto ;
+  height: 100%;
+}
+#carouselExampleControlsNoTouching{
+  background-color: none;
+}
+#ngay_10 {
+  display: none;;
+ width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#ffffff;
+ position:fixed;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+#ngay_10 {
+  display: none;;
+ width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#ffffff;
+ position:fixed;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+#ngay_12 {
+  display: none;;
+ width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#ffffff;
+ position:fixed;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+#ngay_18 {
+  display: none;;
+ width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#ffffff;
+ position:fixed;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+#ngay_25 {
+  display: none;;
+ width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#ffffff;
+ position:fixed;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
+#t_t {
+  display: none;;
+ width:500px;
+ height:500px;
+ margin:0 auto;
+ background:#ffffff;
+ position:fixed;
+ left:50%;
+ top:50%;
+ margin-left:-250px;
+ margin-top:-250px;
+}
