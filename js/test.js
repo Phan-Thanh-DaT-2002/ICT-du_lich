@@ -1,25 +1,20 @@
-
-let a = { value: '22' }
-let b = { value: 23 }
-const c = { value: null }
-let d = { value: (1 / NaN) }
-let e = { value: NaN }
-let f = { value: function () { } }
-let arr = [a, b, c, d, e, f]
-function kt(x) {
-  switch (typeof x) {
-    case 'number': console.log(x + ' la number'); break;
-    case 'undefine': console.log(x + ' la undefine'); break;
-    case 'null': console.log(x + ' la null'); break;
-    case 'string': console.log(x + ' la string'); break;
-    case 'object': console.log(x + ' la object'); break;
-    case 'NaN': console.log(x + ' la NaN'); break;
-    case 'function': console.log(x + ' la function'); break;
+const checkLicensePlateInHanoi = (licensePlate) => {
+  const array = ['29', '30', '31', '32', '33', '40'];
+  for (const value of array) {
+      if (licensePlate.startsWith(value)) {
+          return true;
+      } 
   }
+  return false;
 }
+const listLicensePlates = ["29P1-124123", "30L9-63568", "17B3-29013", "33H2-21231"];
 
-for (var i = 0; i < arr.length; i++) {
-  kt(arr[i].value)
-}
+let listLicensePlateInHanois = [];
 
-  
+for (const value of listLicensePlates) {
+  if (checkLicensePlateInHanoi(value)) {
+      listLicensePlateInHanois.push(value);
+  }
+} 
+
+console.log("Các biển số thuộc Hà Nội: ", listLicensePlateInHanois);
