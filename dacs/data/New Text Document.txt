@@ -1,0 +1,15 @@
+CREATE SCHEMA `dacs` ;
+
+CREATE TABLE `dacs`.`user` (
+  `id_user` INT NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `sex` VARCHAR(45) NULL,
+  `age` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `telephone` VARCHAR(45) NOT NULL,
+  `adress` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_user`));
+
+ALTER TABLE `dacs`.`user` 
+ADD COLUMN `name_login` VARCHAR(45) NOT NULL AFTER `adress`,
+ADD COLUMN `password` VARCHAR(45) NOT NULL AFTER `name_login`;
