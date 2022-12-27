@@ -1,0 +1,55 @@
+CREATE SCHEMA `dacs` ;
+
+CREATE TABLE `dacs`.`user_table` (
+  `id_user` INT NOT NULL,
+  `phan_biet` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `age` INT NOT NULL,
+  `sex` VARCHAR(45) NOT NULL,
+  `adress` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
+  `telephone` INT NOT NULL,
+  `kinh_nghiem` VARCHAR(45) NULL,
+  `kha_nang_ngoai_ngu` VARCHAR(45) NULL,
+  `diem_noi_bat` VARCHAR(45) NULL,
+  `avata` VARCHAR(45) NULL,
+  `video` VARCHAR(45) NULL,
+  `image` VARCHAR(45) NULL,
+  `user_tablecol` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_user`));
+ALTER TABLE `dacs`.`user_table` 
+DROP COLUMN `user_tablecol`;
+
+INSERT INTO dacs.user_table (id_user, phan_biet, name, age, sex, adress, email, password, telephone, kinh_nghiem, kha_nang_ngoai_ngu, diem_noi_bat, avata, video, image)
+VALUES (1, "khach", "phan dat", 20, "nam", "phu tho", "dat@gmail.com", "dat321", 098, null, null, null, null,null, null),
+(2, "HDV", "phan hung", 20, "nam", "phu tho", "hung@gmail.com", "hungt321", 098, "2 nam lm HDV", "tieng viet, tieng anh", "dep trai","/dacs/image/user.png","/dacs/image/user.png", "/dacs/image/user.png");
+
+
+CREATE TABLE `dacs`.`lich_user` (
+  `user_id` INT NOT NULL,
+  `HDV_id` INT NOT NULL,
+  `date` INT NOT NULL,
+  `dia_diem` VARCHAR(45) NOT NULL,
+  `thanh_tien` INT NOT NULL;
+
+INSERT INTO dacs.lich_user (user_id, HDV_id, date, dia_diem, thanh_tien)
+VALUES (1, 2, "UTC022122022", "vinh ha long", 100),
+(1, 6, "UTC025122022", "vung tau", 100);
+
+
+CREATE TABLE `dacs`.`lich_HDV` (
+  `user_id` INT NOT NULL,
+  `HDV_id` INT NOT NULL,
+  `date` INT NOT NULL,
+  `dia_diem` VARCHAR(45) NOT NULL,
+  `thanh_tien` INT NOT NULL);
+
+INSERT INTO dacs.lich_user (HDV_id, user_id,  date, dia_diem, thanh_tien)
+VALUES (2, 1, "UTC022122023", "vinh ha long", 100),
+(2, 3, "UTC025112022", "vung tau", 100);
+
+
+
+
+
