@@ -3,7 +3,7 @@
 	--darker: #1F2937;
 	--darkest: #111827;
 	--grey: #6B7280;
-	--pink: #EC4899;
+	--pink: #6bec48;
 	--purple: #8B5CF6;
 	--light: #EEE;
 }
@@ -36,7 +36,7 @@ h3 {
 }
 
 .table-sortable thead tr {
-  background-color: #e30f7c;
+  background-color: #84e30f;
   color: #ffffff;
   text-align: left;
   font-weight: bold;
@@ -196,7 +196,7 @@ a{
   -webkit-text-stroke:5px aqua;
 }
 a:before {
-  content:"ICT";
+  content:"";
   color:#fff;
   position:absolute;
    border-right: 5px solid aqua;

@@ -1,15 +1,107 @@
-CREATE SCHEMA `dacs` ;
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: localhost:3306
+-- Thời gian đã tạo: Th12 29, 2022 lúc 04:10 AM
+-- Phiên bản máy phục vụ: 10.4.25-MariaDB
+-- Phiên bản PHP: 8.0.23
 
-CREATE TABLE `dacs`.`user` (
-  `id_user` INT NOT NULL,
-  `name` VARCHAR(45) NOT NULL,
-  `sex` VARCHAR(45) NULL,
-  `age` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `telephone` VARCHAR(45) NOT NULL,
-  `adress` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id_user`));
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-ALTER TABLE `dacs`.`user` 
-ADD COLUMN `name_login` VARCHAR(45) NOT NULL AFTER `adress`,
-ADD COLUMN `password` VARCHAR(45) NOT NULL AFTER `name_login`;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `dacs`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `lich_hdv`
+--
+
+CREATE TABLE `lich_hdv` (
+  `user_id` int(11) NOT NULL,
+  `HDV_id` int(11) NOT NULL,
+  `date` int(11) NOT NULL,
+  `dia_diem` varchar(45) NOT NULL,
+  `thanh_tien` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `lich_user`
+--
+
+CREATE TABLE `lich_user` (
+  `user_id` int(11) NOT NULL,
+  `HDV_id` int(11) NOT NULL,
+  `date` int(11) NOT NULL,
+  `dia_diem` varchar(45) NOT NULL,
+  `thanh_tien` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `lich_user`
+--
+
+INSERT INTO `lich_user` (`user_id`, `HDV_id`, `date`, `dia_diem`, `thanh_tien`) VALUES
+(1, 2, 0, 'vinh ha long', 100),
+(1, 6, 0, 'vung tau', 100),
+(1, 2, 0, 'vinh ha long', 100),
+(3, 2, 0, 'vung tau', 100);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user_table`
+--
+
+CREATE TABLE `user_table` (
+  `id_user` int(11) NOT NULL,
+  `phan_biet` varchar(45) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `age` int(11) NOT NULL,
+  `sex` varchar(45) NOT NULL,
+  `adress` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `telephone` int(11) NOT NULL,
+  `kinh_nghiem` varchar(45) DEFAULT NULL,
+  `kha_nang_ngoai_ngu` varchar(45) DEFAULT NULL,
+  `diem_noi_bat` varchar(45) DEFAULT NULL,
+  `avata` varchar(45) DEFAULT NULL,
+  `video` varchar(45) DEFAULT NULL,
+  `image` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `user_table`
+--
+
+INSERT INTO `user_table` (`id_user`, `phan_biet`, `name`, `age`, `sex`, `adress`, `email`, `password`, `telephone`, `kinh_nghiem`, `kha_nang_ngoai_ngu`, `diem_noi_bat`, `avata`, `video`, `image`) VALUES
+(1, 'khach', 'phan dat', 20, 'nam', 'phu tho', 'dat@gmail.com', 'dat321', 98, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 'HDV', 'phan hung', 20, 'nam', 'phu tho', 'hung@gmail.com', 'hungt321', 98, '2 nam lm HDV', 'tieng viet, tieng anh', 'dep trai', '/dacs/image/user.png', '/dacs/image/user.png', '/dacs/image/user.png');
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `user_table`
+--
+ALTER TABLE `user_table`
+  ADD PRIMARY KEY (`id_user`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
