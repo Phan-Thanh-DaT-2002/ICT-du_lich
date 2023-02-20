@@ -5,8 +5,8 @@ body {
 
 /* Style the header */
 .header {
-  padding: 80px;
-  text-align: center;
+  padding: 40px;
+  text-align: left;
   background: #1abc9c;
   color: white;
 }
