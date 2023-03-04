@@ -23,7 +23,7 @@ console.log("ex3", removeFromArray([1, 2, 3, 4, 2, 2], 2))
 
 //ex4
 function leapYears(year) {
-  if (year % 4 === 0 && year % 100 === 0) return true;
+  if (year % 4 === 0 && year % 400 === 0) return true;
   else return false;
 }
 
