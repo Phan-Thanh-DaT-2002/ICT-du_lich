@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="max-width: max-content; margin: auto;">
+  <form>
+    <h3>ĐO CHỈ SỐ (BMI)</h3>
+    <label for="">ho ten:</label><br>
+    <input type="text" id="name" value=""> <br>
+    <label for="">chieu cao</label><br>
+    <input type="number" id="c_c" value=""> <br>
+    <label for="">can nang</label><br>
+    <input type="number" id="c_n" value=""> <br>
+    <input type="radio" name="gioi_tinh" id="nam" onclick="retu_nam()">nam
+    <input type="radio" name="gioi_tinh" id="nu" onclick="retu_nu()">nu <br> <br>
+  </form>
+  <button onclick="
+var ten = document.querySelector('#name').value;
+var chieuCao = document.querySelector('#c_c').value;
+var canNang = document.querySelector('#c_n').value;
+kiem_tra(ten, chieuCao, canNang, gioiTinh)"> kiem tra</button>
+  <div class="ket_qua">ket qua IBM: </div>
+  <script src="/dom/btvn/ex1.js"></script>
+</body>
+
+</html>
