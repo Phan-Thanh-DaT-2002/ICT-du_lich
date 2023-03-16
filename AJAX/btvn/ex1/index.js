@@ -1,4 +1,3 @@
-
 var arrUrl = [];
 async function getApi() {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon/");
@@ -28,7 +27,7 @@ getApi();
 function addActive(event) {
   event.target.classList.toggle('active');
   var ten = event.srcElement.innerText;
-  document.getElementById('ten_can_sua_doi').innerHTML = ten;
+  document.getElementById('doi_anh').innerHTML = ten;
 
   var ull;
   for (var i = 0; i < arrUrl.length; i++) {
@@ -36,7 +35,20 @@ function addActive(event) {
       ull = i + 1;
     }
   }
-  document.getElementById('anh_sua_doi').src = arrUrl[ull].val;
-  console.log(document.getElementById('anh_sua_doi').src);
-  
+  axios.get(`${arrUrl[ull].val}`).then((response) => {
+    tam(response.data.sprites.back_default);
+    name(response.data.types[0].type.name);
+    return 0;
+  })
+
+}
+
+function tam(data) {
+  document.getElementById('anh_sua_doi').src = data;
+
+}
+
+function name(data) {
+  console.log(data);
+  document.getElementById('doi_ten').innerHTML = data;
 }
