@@ -24,11 +24,11 @@ class toDoList extends toDo {
   }
 }
 
-function check_date(date: string, toDoList: object): boolean {
-  let check: boolean;
+function check_date(date: string, toDoList: []): boolean {
+  let check: boolean = true;
   for (let i = 0; i < toDoList.length; i++) {
     if (toDoList[i].date === date) {
-      check = true;
+      check = false;
       break;
     }
   }
