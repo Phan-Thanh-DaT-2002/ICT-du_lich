@@ -9,8 +9,4 @@ function App() {
 
 }
 
-function check(value) {
-  if (value) return <h1>hello user</h1>;
-  else return <h1>login now</h1>;
-}
 export default App;
