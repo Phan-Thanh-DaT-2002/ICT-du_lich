@@ -1,15 +1,14 @@
-// import logo from './logo.svg';
-import './App.css';
-// import { useState } from 'react';
-import Meme from'./assets/image/Meme.png'
-import { ReactComponent as IconEdit } from './assets/icon/logo.svg';
-function App() {
-  return (
-    <div className="container">
-      <img src={Meme} alt=''/>
-      <IconEdit/>
-    </div>
-  );
-}
+// import { render, screen } from '@testing-library/react';
+// import App from './App';
 
-export default App;
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router.js";
+
+// test('renders learn react link', () => {
+//   render(<App />);
+//   const linkElement = screen.getByText(/learn react/i);
+//   expect(linkElement).toBeInTheDocument();
+// });
+export function App() {
+  return <RouterProvider router={router}></RouterProvider>;
+}
